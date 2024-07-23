@@ -1,0 +1,80 @@
+.login-container {
+  display: flex;
+  height: 100vh; 
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+}
+
+.background-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.overlay-image {
+
+  position: absolute;
+  top: 30%; 
+  left: 10%; 
+  width: 80%; 
+  height: auto; 
+  pointer-events: auto; 
+}
+
+.signin-container {
+  flex: 1; /* Takes half of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f8fb;
+  
+  .logo {
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+       }
+       .mat-mdc-raised-button:not(:disabled){
+        color: aliceblue;
+    background-color: #4285F4;
+       }
+  }
+}
+
+/* Media for Responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .image-container, .signin-container {
+    flex: none; /* Reset flex for stacking */
+    width: 100%; /* Full width */
+  }
+/* 
+  .overlay-image {
+    width: 50%; 
+  } */
+}

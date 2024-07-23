@@ -1,0 +1,135 @@
+<div class="left-bg">
+    <div class="image-container">
+      <img src="\assets\Blue.png" class="background-image" />
+      <img src="\assets\Work.png" class="overlay-image" />
+    </div>
+
+
+
+
+    <div class="forgot-password-container">
+      <div class="forgot-password-content">
+        <!-- <img src="path-to-your-logo.png" alt="Logo" class="logo" /> -->
+        <h2>Forgot Password</h2>
+        <form formGroup="forgot" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="email">Enter your email address</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              placeholder="Enter Email" 
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="forgot.invalid">
+            Send Link To My Email
+          </button>
+        </form>
+        <p>Back to Sign In? <a routerLink="">Go Back</a></p>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="forgot-container">
+        <div class="logo">
+          <h1>Logo</h1>
+        </div>
+    
+        <form FormGroup="forgot" (ngSubmit)="onSubmit()">
+          <h2>Forgot Password</h2>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your email address</mat-label>
+            <input matInput formControlName="email" placeholder="Enter Email" required>
+            <mat-error *ngIf="forgot.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            
+            <mat-error *ngIf="forgot.get('email')?.hasError('email')">
+              Please enter a valid email
+            </mat-error>
+
+          </mat-form-field> 
+
+          <mat-card-actions>
+            <button mat-raised-button type="submit">Send Link To My Mail</button>
+            <p>Back to Sign in?<a href="">Go Back</a> </p>
+          </mat-card-actions>
+        </form>
+    </div>
+  </div> -->
+  
+
+
+
+
+
+
+
+
+            <!-- <div class="example-container">
+                <mat-form-field>
+                  <mat-label>Enter your email</mat-label>
+                  <input matInput
+                         placeholder="pat@example.com"
+                         formControl="email"
+                         (blur)="updateErrorMessage()"
+                         required>
+                  @if (email.invalid) {
+                    <mat-error>{{errorMessage}}</mat-error>
+                  }
+                </mat-form-field>
+              </div>
+              
+          </mat-form-field> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <div class="forgot-container">
+    <div class="logo">
+      <h1>Logo</h1>
+    </div>
+    <form formGroup="forgotForm" (ngSubmit)="onSubmit()">
+      <h2>Forgot Password</h2>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email address</mat-label>
+        <input matInput formControlName="email" placeholder="Enter Email" required>
+        <mat-error *ngIf="forgotForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="forgotForm.get('email')?.hasError('email')">
+          Please enter a valid email
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Send Link To My Email</button>
+      <div class="back-to-signin">
+        Back to Sign In? <a routerLink="/signin">Go Back</a>
+      </div>
+    </form>
+  </div> -->
+  
